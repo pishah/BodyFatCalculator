@@ -7,6 +7,7 @@ public partial class MainPage : ContentPage
 	int count = 0;
 	double h = -40;
 	List<Grid> grids = new List<Grid>();
+    private bool isAnimatingCharacter = false;
 	public MainPage()
 	{
 		InitializeComponent();
@@ -21,11 +22,22 @@ public partial class MainPage : ContentPage
 		await g.TranslateTo(0, tr, t, Easing.SinInOut);
 		
 	}
-	
+    private async void animateCharacter() { 
+        if (!isAnimatingCharacter)
+        {
+            isAnimatingCharacter = true;
+            imgCharacter.TranslateTo(0, -150, 500, Easing.SinOut);
+            await imgCharacter.ScaleTo(5.5, 500, Easing.SinOut);
+            imgCharacter.TranslateTo(0, -65, 1000, Easing.SinOut);
+            await imgCharacter.ScaleTo(5, 600, Easing.SinOut);
+            isAnimatingCharacter = false;
+        }
+    }
    
 
     private void txtEntry_TextChanged(object sender, TextChangedEventArgs e)
     {
+        animateCharacter();
 		int weight = 0;
 		int.TryParse(txtWeight.Text, out weight);
         int goal = 0;

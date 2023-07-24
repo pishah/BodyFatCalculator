@@ -26,18 +26,18 @@
         </Grid>
         
         <Image Source="wlossgfx1.png" Aspect="AspectFill" Grid.RowSpan="4" Opacity="0.25" />
-        <Border StrokeShape="RoundRectangle 0,0,90,90" Margin="0,0,0,0" MaximumWidthRequest="600" BackgroundColor="#90000000">
-            <!--<Border.Background>
+        <Border StrokeShape="RoundRectangle 0,0,90,90" Margin="0,0,0,0" MaximumWidthRequest="600">
+            <Border.Background>
                 <LinearGradientBrush>
-                    <GradientStop Color="#d1afb1"
+                    <GradientStop Color="#90d1afb1"
                           Offset="0.1" />
 
-                    <GradientStop Color="#bbc5bc"
+                    <GradientStop Color="#90bbc5bc"
                           Offset="1.0" />
                 </LinearGradientBrush>
-            </Border.Background>-->
+            </Border.Background>
             
-            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" TextColor="White" Opacity="0.7" FontFamily="InterBold">Body Fat Percentage Goal</Label>
+            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" TextColor="Black" Opacity="0.7" FontFamily="InterSemiBold">Body Fat Percentage Goal</Label>
         </Border>
         <VerticalStackLayout Grid.Row="1"
             Spacing="95"
@@ -48,7 +48,7 @@
 
 
 
-                <Border StrokeShape="RoundRectangle 12" BackgroundColor="#bbc5bc" Padding="12">
+                <Border StrokeShape="RoundRectangle 12" BackgroundColor="#90bbc5bc" Padding="12">
                     <Border.Shadow>
                         <Shadow Brush="Black"
                 Offset="0,10"
@@ -60,7 +60,7 @@
                         <Label FontSize="Medium" VerticalOptions="Center">lbs</Label>
                     </HorizontalStackLayout>
                 </Border>
-                <Border StrokeShape="RoundRectangle 12" BackgroundColor="#f3c89d" Padding="12">
+                <Border StrokeShape="RoundRectangle 12" BackgroundColor="#90f3c89d" Padding="12">
                     <Border.Shadow>
                         <Shadow Brush="Black"
                 Offset="0,10"
@@ -73,7 +73,7 @@
                     </HorizontalStackLayout>
                 </Border>
                
-                <Border StrokeShape="RoundRectangle 12" BackgroundColor="#d1afb1" Padding="12">
+                <Border StrokeShape="RoundRectangle 12" BackgroundColor="#90d1afb1" Padding="12">
                     <Border.Shadow>
                         <Shadow Brush="Black"
                 Offset="0,10"
@@ -149,6 +149,7 @@
                                     </LinearGradientBrush>
 
                                 </Border.Stroke>
+                                
                             </Border>
                             <Border BackgroundColor="#23f3c89d" StrokeShape="RoundRectangle 90" Margin="0,4" StrokeThickness="0.0"></Border>
 
@@ -259,12 +260,14 @@
             </Border>
 
         </VerticalStackLayout>
-        <Grid Grid.Row="3" BackgroundColor="#90000000" Grid.ColumnSpan="4">
+        <Image x:Name="imgCharacter" Source="fitnessguy1.png" Grid.ColumnSpan="3" Grid.RowSpan="4" Scale="5" TranslationY="-65"  VerticalOptions="End" Grid.Row="2" />
+        <Grid Grid.Row="3" BackgroundColor="#000000" Grid.ColumnSpan="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="25*"></ColumnDefinition>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
                 <ColumnDefinition Width="25*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            
             <Border Grid.Column="2" x:Name="btnTrademark" Margin="-0.5" StrokeShape="RoundRectangle 0, 0, 0,0" BackgroundColor="{AppThemeBinding Light=#99000000, Dark=#05ffffff}" MaximumWidthRequest="200" MinimumWidthRequest="150" StrokeThickness="0" HorizontalOptions="End">
                 <Border.GestureRecognizers>
                     <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered" PointerExited="PointerGestureRecognizer_PointerExited"></PointerGestureRecognizer>
@@ -278,7 +281,7 @@
 
                 </Label>
             </Border>
-            <Label Grid.Column="1" HorizontalOptions="Center" FontAttributes="Italic" FontSize="12" FontFamily="InterLight" Padding="12,0" VerticalTextAlignment="Center">*an approximation, talk to your physician for precisie information on your body weight and goals</Label>
+            <Label Grid.Column="1" HorizontalOptions="Center" FontAttributes="Italic" FontSize="12" FontFamily="InterLight" Padding="12,0" VerticalTextAlignment="Center" TextColor="LightGray">*an approximation, talk to your physician for precisie information on your body weight and goals</Label>
             <Grid Grid.Column="0" HorizontalOptions="End" Padding="6">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -287,6 +290,8 @@
                 <!--<Label VerticalOptions="Center" Opacity="0.7" TextColor="White">normal/fancy:</Label>
                 <CheckBox Grid.Column="1" x:Name="toggleView" CheckedChanged="toggleView_CheckedChanged" VerticalOptions="Start"></CheckBox>-->
             </Grid>
+            
+
         </Grid>
     </Grid>
 

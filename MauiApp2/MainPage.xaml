@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.RowSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.Column="0" BackgroundColor="#bbc5bc"></Rectangle>
+            <Rectangle Grid.Column="1" BackgroundColor="#c5aa7e"></Rectangle>
+            <Rectangle Grid.Column="2" BackgroundColor="#fac38e"></Rectangle>
+            <Rectangle Grid.Column="3" BackgroundColor="#f9988b"></Rectangle>
+            <Rectangle Grid.Column="4" BackgroundColor="#d1afb1"></Rectangle>
+        </Grid>
+        <Border StrokeShape="RoundRectangle 0,0,90,90" BackgroundColor="Black">
+            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" TextColor="White">Body Fat Percentage Goal</Label>
+        </Border>
+        
+        <VerticalStackLayout Grid.Row="1"
+            Spacing="95"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <HorizontalStackLayout Spacing="12" HorizontalOptions="Center" VerticalOptions="Start">
+
+                <Border StrokeShape="RoundRectangle 12" BackgroundColor="#d1afb1" Padding="12">
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                Offset="0,10"
+                Opacity="0.5" />
+                    </Border.Shadow>
+                    <HorizontalStackLayout>
+                        <Label VerticalOptions="Center" Margin="6">Goal Percent: </Label>
+                        <Entry x:Name="txtGoal" TextChanged="txtEntry_TextChanged" BackgroundColor="White"></Entry>
+                        <Label FontSize="Medium" VerticalOptions="Center">%</Label>
+                    </HorizontalStackLayout>
+                </Border>
+
+
+
+                <Border StrokeShape="RoundRectangle 12" BackgroundColor="LightGray" Padding="12">
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                Offset="0,10"
+                Opacity="0.5" />
+                    </Border.Shadow>
+                    <HorizontalStackLayout>
+                        <Label VerticalOptions="Center" Margin="6">Current Percent:</Label>
+                        <Entry x:Name="txtCurrent" TextChanged="txtEntry_TextChanged" BackgroundColor="White"></Entry>
+                        <Label FontSize="Medium" VerticalOptions="Center">%</Label>
+                    </HorizontalStackLayout>
+                </Border>
+                <Border StrokeShape="RoundRectangle 12" BackgroundColor="#bbc5bc" Padding="12">
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                Offset="0,10"
+                Opacity="0.5" />
+                    </Border.Shadow>
+                    <HorizontalStackLayout>
+                <Label VerticalOptions="Center" Margin="6">Current Weight:</Label>
+                <Entry x:Name="txtWeight" TextChanged="txtEntry_TextChanged" BackgroundColor="White"></Entry>
+                    </HorizontalStackLayout>
+                </Border>
+            </HorizontalStackLayout>
+            <Border StrokeShape="RoundRectangle 90" StrokeThickness="5" HeightRequest="110" WidthRequest="110" Scale="1.9" Margin="12">
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                Offset="0,10"
+                Opacity="0.5" />
+                </Border.Shadow>
+                <Border.Stroke>
+                    
+                    <!-- Center defaults to (0.5,0.5)
+             Radius defaults to (0.5) -->
+                    <LinearGradientBrush>
+                        <GradientStop Color="#bbc5bc"
+                          Offset="0.1" />
+                        <GradientStop Color="#b26852"
+                          Offset="1.0" />
+                    </LinearGradientBrush>
+                    
+                </Border.Stroke>
+                <Frame IsClippedToBounds="True" WidthRequest="100" HeightRequest="100" CornerRadius="90" >
+                    <Frame.Shadow>
+                        <Shadow Brush="Gray"
+                Offset="10,10"
+                Opacity="0.3" />
+                    </Frame.Shadow>
+                    <Frame.Background>
+                       
+
+                        <!-- Center defaults to (0.5,0.5)
+             Radius defaults to (0.5) -->
+                        <RadialGradientBrush>
+                            <GradientStop Color="#b8b4b2"
+                          Offset="0.1" />
+                            <GradientStop Color="#9a8e87"
+                          Offset="1.0" />
+                        </RadialGradientBrush>
+                    </Frame.Background>
+                    <Grid>
+                        <Image Source="wwinner.png" Scale="3" Rotation="32" Opacity="0.075"/>
+
+                        <Grid x:Name="parentGrid" HeightRequest="40" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" Opacity="0.95">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label FontSize="Large" Grid.Row="0">0</Label>
+                                <Label FontSize="Large" Grid.Row="1">1</Label>
+                                <Label FontSize="Large" Grid.Row="2">2</Label>
+                                <Label FontSize="Large" Grid.Row="3">3</Label>
+                                <Label FontSize="Large" Grid.Row="4">4</Label>
+                                <Label FontSize="Large" Grid.Row="5">5</Label>
+                                <Label FontSize="Large" Grid.Row="6">6</Label>
+                                <Label FontSize="Large" Grid.Row="7">7</Label>
+                                <Label FontSize="Large" Grid.Row="8">8</Label>
+                                <Label FontSize="Large" Grid.Row="9">9</Label>
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label FontSize="Large" Grid.Row="0">0</Label>
+                                <Label FontSize="Large" Grid.Row="1">1</Label>
+                                <Label FontSize="Large" Grid.Row="2">2</Label>
+                                <Label FontSize="Large" Grid.Row="3">3</Label>
+                                <Label FontSize="Large" Grid.Row="4">4</Label>
+                                <Label FontSize="Large" Grid.Row="5">5</Label>
+                                <Label FontSize="Large" Grid.Row="6">6</Label>
+                                <Label FontSize="Large" Grid.Row="7">7</Label>
+                                <Label FontSize="Large" Grid.Row="8">8</Label>
+                                <Label FontSize="Large" Grid.Row="9">9</Label>
+                            </Grid>
+                            <Grid Grid.Column="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label FontSize="Large" Grid.Row="0">0</Label>
+                                <Label FontSize="Large" Grid.Row="1">1</Label>
+                                <Label FontSize="Large" Grid.Row="2">2</Label>
+                                <Label FontSize="Large" Grid.Row="3">3</Label>
+                                <Label FontSize="Large" Grid.Row="4">4</Label>
+                                <Label FontSize="Large" Grid.Row="5">5</Label>
+                                <Label FontSize="Large" Grid.Row="6">6</Label>
+                                <Label FontSize="Large" Grid.Row="7">7</Label>
+                                <Label FontSize="Large" Grid.Row="8">8</Label>
+                                <Label FontSize="Large" Grid.Row="9">9</Label>
+                            </Grid>
+
+                        </Grid>
+
+                    </Grid>
+
+
+                </Frame>
+            </Border>
+
+            <Border StrokeShape="RoundRectangle 10" MaximumWidthRequest="600">
+                <Border.Stroke>
+                    <LinearGradientBrush>
+                        
+                        <GradientStop Color="#b26852"
+                          Offset="0.1" />
+                        <GradientStop Color="#bbc5bc"
+                          Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Stroke>
+                
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#60000000"
+                          Offset="0.1" />
+                        <GradientStop Color="#60000000"
+                          Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Label x:Name="txtInfo" Margin="30, 12, 12, 12" TextColor="White">Enter in the information in the textboxes above..</Label>
+            </Border>
+
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>

@@ -49,6 +49,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\Inter-Black.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Bold.ttf" />
+	  <None Remove="Resources\Fonts\Inter-ExtraBold.ttf" />
+	  <None Remove="Resources\Fonts\Inter-ExtraLight.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Light.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Medium.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Inter-SemiBold.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Thin.ttf" />
+	  <None Remove="Resources\Images\glass1.png" />
+	  <None Remove="Resources\Images\glass2.png" />
+	  <None Remove="Resources\Images\glass3.png" />
+	  <None Remove="Resources\Images\glass4.png" />
+	  <None Remove="Resources\Images\wlossgfx1.png" />
 	  <None Remove="Resources\Images\wwinner.png" />
 	</ItemGroup>
 

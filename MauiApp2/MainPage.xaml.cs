@@ -73,5 +73,23 @@ public partial class MainPage : ContentPage
             yield return individualFactor;
         } while (tennerFactor > 1);
     }
+    private async void ClickGestureRecognizer_Clicked(object sender, EventArgs e)
+    {
+        Uri uri = new Uri("https://pishah.com");
+        await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+    }
+
+    private void PointerGestureRecognizer_PointerEntered(object sender, PointerEventArgs e)
+    {
+        txtTrademark.TextColor = Colors.White;
+        txtTrademark.FontAttributes = FontAttributes.Italic;
+    }
+
+    private void PointerGestureRecognizer_PointerExited(object sender, PointerEventArgs e)
+    {
+
+        txtTrademark.TextColor = Colors.White;
+        txtTrademark.FontAttributes = FontAttributes.None;
+    }
 }
 

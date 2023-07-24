@@ -5,7 +5,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="45"></RowDefinition>
+            <RowDefinition Height="55"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="35"></RowDefinition>
         </Grid.RowDefinitions>
@@ -24,43 +24,30 @@
             <Rectangle Grid.Column="3" BackgroundColor="#f9988b"></Rectangle>
             <Rectangle Grid.Column="4" BackgroundColor="#d1afb1"></Rectangle>
         </Grid>
-        <Border StrokeShape="RoundRectangle 0,0,90,90" BackgroundColor="Black">
-            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" TextColor="White">Body Fat Percentage Goal</Label>
-        </Border>
         
+        <Image Source="wlossgfx1.png" Aspect="AspectFill" Grid.RowSpan="4" Opacity="0.25" />
+        <Border StrokeShape="RoundRectangle 0,0,90,90" Margin="0,0,0,0" MaximumWidthRequest="600" BackgroundColor="#90000000">
+            <!--<Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#d1afb1"
+                          Offset="0.1" />
+
+                    <GradientStop Color="#bbc5bc"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Border.Background>-->
+            
+            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" TextColor="White" Opacity="0.7" FontFamily="InterBold">Body Fat Percentage Goal</Label>
+        </Border>
         <VerticalStackLayout Grid.Row="1"
             Spacing="95"
             Padding="30,0"
             VerticalOptions="Center">
             <HorizontalStackLayout Spacing="12" HorizontalOptions="Center" VerticalOptions="Start">
 
-                <Border StrokeShape="RoundRectangle 12" BackgroundColor="#d1afb1" Padding="12">
-                    <Border.Shadow>
-                        <Shadow Brush="Black"
-                Offset="0,10"
-                Opacity="0.5" />
-                    </Border.Shadow>
-                    <HorizontalStackLayout>
-                        <Label VerticalOptions="Center" Margin="6">Goal Percent: </Label>
-                        <Entry x:Name="txtGoal" TextChanged="txtEntry_TextChanged" BackgroundColor="White"></Entry>
-                        <Label FontSize="Medium" VerticalOptions="Center">%</Label>
-                    </HorizontalStackLayout>
-                </Border>
 
 
 
-                <Border StrokeShape="RoundRectangle 12" BackgroundColor="LightGray" Padding="12">
-                    <Border.Shadow>
-                        <Shadow Brush="Black"
-                Offset="0,10"
-                Opacity="0.5" />
-                    </Border.Shadow>
-                    <HorizontalStackLayout>
-                        <Label VerticalOptions="Center" Margin="6">Current Percent:</Label>
-                        <Entry x:Name="txtCurrent" TextChanged="txtEntry_TextChanged" BackgroundColor="White"></Entry>
-                        <Label FontSize="Medium" VerticalOptions="Center">%</Label>
-                    </HorizontalStackLayout>
-                </Border>
                 <Border StrokeShape="RoundRectangle 12" BackgroundColor="#bbc5bc" Padding="12">
                     <Border.Shadow>
                         <Shadow Brush="Black"
@@ -68,8 +55,34 @@
                 Opacity="0.5" />
                     </Border.Shadow>
                     <HorizontalStackLayout>
-                <Label VerticalOptions="Center" Margin="6">Current Weight:</Label>
-                <Entry x:Name="txtWeight" TextChanged="txtEntry_TextChanged" BackgroundColor="White"></Entry>
+                        <Label VerticalOptions="Center" Margin="6">Current Weight:</Label>
+                        <Entry x:Name="txtWeight" TextChanged="txtEntry_TextChanged" BackgroundColor="Black" TextColor="White"></Entry>
+                        <Label FontSize="Medium" VerticalOptions="Center">lbs</Label>
+                    </HorizontalStackLayout>
+                </Border>
+                <Border StrokeShape="RoundRectangle 12" BackgroundColor="#f3c89d" Padding="12">
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                Offset="0,10"
+                Opacity="0.5" />
+                    </Border.Shadow>
+                    <HorizontalStackLayout>
+                        <Label VerticalOptions="Center" Margin="6">Current Percent:</Label>
+                        <Entry x:Name="txtCurrent" TextChanged="txtEntry_TextChanged" BackgroundColor="Black" TextColor="White"></Entry>
+                        <Label FontSize="Medium" VerticalOptions="Center">%</Label>
+                    </HorizontalStackLayout>
+                </Border>
+               
+                <Border StrokeShape="RoundRectangle 12" BackgroundColor="#d1afb1" Padding="12">
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                Offset="0,10"
+                Opacity="0.5" />
+                    </Border.Shadow>
+                    <HorizontalStackLayout>
+                        <Label VerticalOptions="Center" Margin="6">Goal Percent:</Label>
+                        <Entry x:Name="txtGoal" TextChanged="txtEntry_TextChanged" BackgroundColor="Black" TextColor="White"></Entry>
+                        <Label FontSize="Medium" VerticalOptions="Center">%</Label>
                     </HorizontalStackLayout>
                 </Border>
             </HorizontalStackLayout>
@@ -86,6 +99,7 @@
                     <LinearGradientBrush>
                         <GradientStop Color="#bbc5bc"
                           Offset="0.1" />
+                        
                         <GradientStop Color="#b26852"
                           Offset="1.0" />
                     </LinearGradientBrush>
@@ -110,9 +124,9 @@
                         </RadialGradientBrush>
                     </Frame.Background>
                     <Grid>
-                        <Image Source="wwinner.png" Scale="3" Rotation="32" Opacity="0.075"/>
+                        <Image Source="glass4.png" Scale="4.5" Rotation="0" Opacity="1" Margin="5,12,3,0"/>
 
-                        <Grid x:Name="parentGrid" HeightRequest="40" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" Opacity="0.95">
+                        <Grid x:Name="parentGrid" HeightRequest="40" WidthRequest="60" Scale="0.75" Margin="0,2,0,0" HorizontalOptions="Center" VerticalOptions="Center" Opacity="0.95">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="40"></RowDefinition>
                             </Grid.RowDefinitions>
@@ -121,7 +135,26 @@
                                 <ColumnDefinition Width="20"></ColumnDefinition>
                                 <ColumnDefinition Width="20"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Grid Grid.Column="0">
+                            <Border BackgroundColor="#50000000" StrokeShape="RoundRectangle 12" Margin="-32,-2" Grid.Column="1" StrokeThickness="1">
+                                <Border.Stroke>
+
+                                    <!-- Center defaults to (0.5,0.5)
+             Radius defaults to (0.5) -->
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#bbc5bc"
+                          Offset="0.1" />
+
+                                        <GradientStop Color="#b26852"
+                          Offset="1.0" />
+                                    </LinearGradientBrush>
+
+                                </Border.Stroke>
+                            </Border>
+                            <Border BackgroundColor="#23f3c89d" StrokeShape="RoundRectangle 90" Margin="0,4" StrokeThickness="0.0"></Border>
+
+                            <Border BackgroundColor="#23f3c89d" StrokeShape="RoundRectangle 90" Margin="0,4" Grid.Column="2" StrokeThickness="0.0"></Border>
+                            <Border BackgroundColor="#23f3c89d" StrokeShape="RoundRectangle 90" Margin="0,4" Grid.Column="1" StrokeThickness="0.0"></Border>
+                            <Grid Grid.Column="0" HorizontalOptions="Center">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="40"></RowDefinition>
                                     <RowDefinition Height="40"></RowDefinition>
@@ -134,18 +167,18 @@
                                     <RowDefinition Height="40"></RowDefinition>
                                     <RowDefinition Height="40"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Label FontSize="Large" Grid.Row="0">0</Label>
-                                <Label FontSize="Large" Grid.Row="1">1</Label>
-                                <Label FontSize="Large" Grid.Row="2">2</Label>
-                                <Label FontSize="Large" Grid.Row="3">3</Label>
-                                <Label FontSize="Large" Grid.Row="4">4</Label>
-                                <Label FontSize="Large" Grid.Row="5">5</Label>
-                                <Label FontSize="Large" Grid.Row="6">6</Label>
-                                <Label FontSize="Large" Grid.Row="7">7</Label>
-                                <Label FontSize="Large" Grid.Row="8">8</Label>
-                                <Label FontSize="Large" Grid.Row="9">9</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="0">0</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="1">1</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="2">2</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="3">3</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="4">4</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="5">5</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="6">6</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="7">7</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="8">8</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="9">9</Label>
                             </Grid>
-                            <Grid Grid.Column="1">
+                            <Grid Grid.Column="1" HorizontalOptions="Center">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="40"></RowDefinition>
                                     <RowDefinition Height="40"></RowDefinition>
@@ -158,18 +191,18 @@
                                     <RowDefinition Height="40"></RowDefinition>
                                     <RowDefinition Height="40"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Label FontSize="Large" Grid.Row="0">0</Label>
-                                <Label FontSize="Large" Grid.Row="1">1</Label>
-                                <Label FontSize="Large" Grid.Row="2">2</Label>
-                                <Label FontSize="Large" Grid.Row="3">3</Label>
-                                <Label FontSize="Large" Grid.Row="4">4</Label>
-                                <Label FontSize="Large" Grid.Row="5">5</Label>
-                                <Label FontSize="Large" Grid.Row="6">6</Label>
-                                <Label FontSize="Large" Grid.Row="7">7</Label>
-                                <Label FontSize="Large" Grid.Row="8">8</Label>
-                                <Label FontSize="Large" Grid.Row="9">9</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="0">0</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="1">1</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="2">2</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="3">3</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="4">4</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="5">5</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="6">6</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="7">7</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="8">8</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="9">9</Label>
                             </Grid>
-                            <Grid Grid.Column="2">
+                            <Grid Grid.Column="2" HorizontalOptions="Center">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="40"></RowDefinition>
                                     <RowDefinition Height="40"></RowDefinition>
@@ -182,16 +215,16 @@
                                     <RowDefinition Height="40"></RowDefinition>
                                     <RowDefinition Height="40"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Label FontSize="Large" Grid.Row="0">0</Label>
-                                <Label FontSize="Large" Grid.Row="1">1</Label>
-                                <Label FontSize="Large" Grid.Row="2">2</Label>
-                                <Label FontSize="Large" Grid.Row="3">3</Label>
-                                <Label FontSize="Large" Grid.Row="4">4</Label>
-                                <Label FontSize="Large" Grid.Row="5">5</Label>
-                                <Label FontSize="Large" Grid.Row="6">6</Label>
-                                <Label FontSize="Large" Grid.Row="7">7</Label>
-                                <Label FontSize="Large" Grid.Row="8">8</Label>
-                                <Label FontSize="Large" Grid.Row="9">9</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="0">0</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="1">1</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="2">2</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="3">3</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="4">4</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="5">5</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="6">6</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="7">7</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="8">8</Label>
+                                <Label FontSize="Large" TextColor="#c4f2ec" HorizontalOptions="Center" Grid.Row="9">9</Label>
                             </Grid>
 
                         </Grid>
@@ -202,7 +235,7 @@
                 </Frame>
             </Border>
 
-            <Border StrokeShape="RoundRectangle 10" MaximumWidthRequest="600">
+            <Border StrokeShape="RoundRectangle 10" MaximumWidthRequest="600" Padding="-12">
                 <Border.Stroke>
                     <LinearGradientBrush>
                         
@@ -222,10 +255,39 @@
                     </LinearGradientBrush>
                 </Border.Background>
 
-                <Label x:Name="txtInfo" Margin="30, 12, 12, 12" TextColor="White">Enter in the information in the textboxes above..</Label>
+                <Label x:Name="txtInfo" Margin="12" Padding="6" TextColor="White">Enter in the information in the textboxes above..</Label>
             </Border>
 
         </VerticalStackLayout>
+        <Grid Grid.Row="3" BackgroundColor="#90000000" Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="25*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="2" x:Name="btnTrademark" Margin="-0.5" StrokeShape="RoundRectangle 0, 0, 0,0" BackgroundColor="{AppThemeBinding Light=#99000000, Dark=#05ffffff}" MaximumWidthRequest="200" MinimumWidthRequest="150" StrokeThickness="0" HorizontalOptions="End">
+                <Border.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered" PointerExited="PointerGestureRecognizer_PointerExited"></PointerGestureRecognizer>
+
+                    <ClickGestureRecognizer Clicked="ClickGestureRecognizer_Clicked"></ClickGestureRecognizer>
+                    <TapGestureRecognizer Tapped="ClickGestureRecognizer_Clicked"></TapGestureRecognizer>
+                </Border.GestureRecognizers>
+                <Label Opacity="0.7" x:Name="txtTrademark" FontFamily="InterNormal" TextColor="White" Text="pishah llc"  VerticalOptions="Center" HorizontalOptions="Center">
+
+
+
+                </Label>
+            </Border>
+            <Label Grid.Column="1" HorizontalOptions="Center" FontAttributes="Italic" FontSize="12" FontFamily="InterLight" Padding="12,0" VerticalTextAlignment="Center">*an approximation, talk to your physician for precisie information on your body weight and goals</Label>
+            <Grid Grid.Column="0" HorizontalOptions="End" Padding="6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!--<Label VerticalOptions="Center" Opacity="0.7" TextColor="White">normal/fancy:</Label>
+                <CheckBox Grid.Column="1" x:Name="toggleView" CheckedChanged="toggleView_CheckedChanged" VerticalOptions="Start"></CheckBox>-->
+            </Grid>
+        </Grid>
     </Grid>
 
 </ContentPage>

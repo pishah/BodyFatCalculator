@@ -39,6 +39,7 @@
             
             <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" TextColor="Black" Opacity="0.7" FontFamily="InterSemiBold">Body Fat Percentage Goal</Label>
         </Border>
+        <Image x:Name="imgCharacter" Source="fitnessguy1.png" Grid.ColumnSpan="3" Grid.RowSpan="4" Scale="5" TranslationY="-65"  VerticalOptions="End" Grid.Row="2" />
         <VerticalStackLayout Grid.Row="1"
             Spacing="95"
             Padding="30,0"
@@ -260,7 +261,7 @@
             </Border>
 
         </VerticalStackLayout>
-        <Image x:Name="imgCharacter" Source="fitnessguy1.png" Grid.ColumnSpan="3" Grid.RowSpan="4" Scale="5" TranslationY="-65"  VerticalOptions="End" Grid.Row="2" />
+       
         <Grid Grid.Row="3" BackgroundColor="#000000" Grid.ColumnSpan="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="25*"></ColumnDefinition>

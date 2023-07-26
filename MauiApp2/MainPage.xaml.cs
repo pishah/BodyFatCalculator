@@ -26,10 +26,13 @@ public partial class MainPage : ContentPage
         if (!isAnimatingCharacter)
         {
             isAnimatingCharacter = true;
-            imgCharacter.TranslateTo(0, -150, 500, Easing.SinOut);
-            await imgCharacter.ScaleTo(5.5, 500, Easing.SinOut);
-            imgCharacter.TranslateTo(0, -65, 1000, Easing.SinOut);
-            await imgCharacter.ScaleTo(5, 600, Easing.SinOut);
+            imgCharacter.TranslateTo(0, -100, 500, Easing.SinInOut);
+            imgCharacter.RotateTo(30, 500, Easing.SinInOut);
+            await imgCharacter.ScaleTo(5.5, 500, Easing.SinInOut);
+            imgCharacter.TranslateTo(0, -65, 400, Easing.SinInOut);
+            imgCharacter.RotateTo(0, 399, Easing.SinInOut);
+            await imgCharacter.ScaleTo(5, 400, Easing.SinInOut);
+            imgCharacter.Rotation = 0;
             isAnimatingCharacter = false;
         }
     }
@@ -45,12 +48,12 @@ public partial class MainPage : ContentPage
         int fat = 0;
         int.TryParse(txtCurrent.Text, out fat);
 		Double mybase = (Double)weight - ((Double)fat / 100) * weight;
-		var gg = mybase + ((double)goal / 100) * mybase;
+		var gg = mybase / (1 -(double)goal / 100);
         if (gg > 999) {
 			return;
 		}
 		txtInfo.Text = "To reach your desired body fat percentage you will need to get to around " + Convert.ToInt32(gg).ToString() +  "lbs. You need to lose " + Convert.ToInt32((weight - gg)).ToString() + "lbs to reach that goal. This is just an approximation off the given body fat and weight, depending on the muscle you add, water etc it could be slightly different.";
-		var digs = GetDigits((int)gg).ToList();
+		var digs = GetDigits(Convert.ToInt32(gg)).ToList();
 		var diff = grids.Count() - digs.Count();
 
         if (diff > 0) {
